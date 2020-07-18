@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+.container {
+  background-color: #efefef;
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.cardcontainer {
+  display: flex;
+  flex-basis: 720px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.card {
+  background-color: #72c3dc;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 240px;
+  flex-shrink: 0;
+  font-size: 4em;
+  height: 240px;
+}
+.sidebar {
+  flex-basis: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body {
+  margin: 0px;
+}
+.page {
+  display: flex;
+  width: 960px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+button {
+  margin-top: 30px;
+  display: block;
+  cursor: pointer;
+  background-color: #72c3dc;
+  color: #ffffff;
+  font-size: 1em;
+  border: none;
+  width: 200px;
+  outline: none;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px #2b8ead;
+}
+.title {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.signature {
+  justify-self: center;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    border: 8px solid #2f454e;
+    border-radius: 8px;
+  }
+  [class="page"] {
+    width: 375px;
+  }
+  [class="title"] {
+    margin: 0px;
+    background-color: #2f454e;
+    width: calc(100vw - 8px);
+    display: block;
+    flex-basis: initial;
+    position: absolute;
+    height: 30px;
+    color: #ffffff;
+    font-weight: normal;
+
+    text-align: center;
+  }
+  [class="container"] {
+    width: 375px;
+    height: calc(100vh - 20px);
+    background-color: #ffffff;
+  }
+  [class="sidebar"] {
+    order: 1;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-evenly;
+  }
+
+  button {
+    width: 150px;
+  }
+  [class="cardcontainer"] {
+    order: 2;
+    justify-content: center;
+  }
+  [class="signature"] {
+    order: 3;
+  }
+  [class="card"] {
+    height: initial;
+    flex-basis: 90%;
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 2px;
+    color: initial;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 3%,
+      #efefef 3%
+    );
+  }
+
+  [class="page"] {
+    display: flex;
+    justify-content: center;
+  }
+}
